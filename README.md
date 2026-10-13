@@ -56,7 +56,7 @@ give it the amber card.
 | Token        | Hex     |
 |--------------|---------|
 | Evergreen    | #082D0F |
-| Lime Cream   | #CBE896 |
+| Butter Yellow | #F4E3A1 |
 | Amber Earth  | #E98A15 |
 | Red Ochre    | #BA5A31 |
 | Ash Grey     | #AAC0AA |
