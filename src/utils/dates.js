@@ -4,7 +4,6 @@ export const MONTHS = [
   'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC',
 ];
 
-// Parse 'YYYY-MM-DD' as a local date (avoids UTC off-by-one).
 export function parseDate(iso) {
   const [y, m, d] = iso.split('-').map(Number);
   return new Date(y, m - 1, d);

@@ -35,7 +35,6 @@ export default function Signup() {
             Sign up
           </button>
         </div>
-        {/* Mailchimp bot trap: real people never fill this in */}
         <div aria-hidden="true" style={{ position: 'absolute', left: '-5000px' }}>
           <input type="text" name={site.mailchimp.botField} tabIndex="-1" defaultValue="" />
         </div>

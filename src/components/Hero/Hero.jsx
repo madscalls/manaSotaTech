@@ -1,14 +1,11 @@
 import { site } from '../../data/site.js';
+import HeroTitle from '../HeroTitle/HeroTitle.jsx';
 import './Hero.css';
 
 export default function Hero() {
   return (
     <section className="hero container">
-      <h1 className="hero__title">
-        ManaSota
-        <br />
-        Tech<span className="hero__title-tag">Network</span>
-      </h1>
+      <HeroTitle />
       <p className="hero__tagline">Built by the people who build.</p>
       <div className="hero__row">
         <p className="hero__blurb">

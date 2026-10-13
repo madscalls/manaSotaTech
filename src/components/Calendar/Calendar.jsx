@@ -26,7 +26,7 @@ export default function Calendar({ events = [] }) {
     }
     while (list.length % 7 !== 0) list.push(null);
     return list;
-  }, [view, eventsByDay]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [view, eventsByDay]);
 
   const shift = (delta) => {
     setView(({ year, month }) => {

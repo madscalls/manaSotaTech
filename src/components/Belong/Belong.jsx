@@ -1,6 +1,5 @@
 import './Belong.css';
 
-// Simple stroke icons, drawn inline so they stay crisp and recolor with CSS.
 const icons = {
   helpdesk: <path d="M4 14v-3a8 8 0 0 1 16 0v3M4 14h3v5H4zM17 14h3v5h-3z" />,
   network: <path d="M12 3v6M5 15v-3h14v3M3 15h4v5H3zM10 15h4v5h-4zM17 15h4v5h-4zM9 3h6v6H9z" />,
@@ -23,7 +22,23 @@ const roles = [
   { icon: 'learner', label: 'Students and career changers' },
 ];
 
-const topics = ['AI', 'Python', 'Security', 'Infrastructure', 'Careers'];
+const topics = [
+  'AI',
+  'Python',
+  'JavaScript',
+  'HTML and CSS',
+  'React',
+  'AWS',
+  'Cloud',
+  'DevOps',
+  'Git',
+  'Linux',
+  'Databases and SQL',
+  'APIs',
+  'Security',
+  'Infrastructure',
+  'Careers',
+];
 
 export default function Belong() {
   return (

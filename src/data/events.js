@@ -1,5 +1,3 @@
-// Club events. Dates are YYYY-MM-DD (local time).
-// Replace the [BRACKETED] placeholders with real details.
 export const events = [
   {
     id: 'hack-night-2026-10-14',
