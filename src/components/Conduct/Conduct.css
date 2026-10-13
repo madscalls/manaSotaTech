@@ -1,0 +1,36 @@
+.conduct {
+  background: var(--lime);
+  color: var(--evergreen);
+}
+
+.conduct__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.conduct__list {
+  margin: 0;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 19px;
+  line-height: 1.55;
+  max-width: 860px;
+}
+
+.conduct__list a {
+  color: var(--evergreen);
+  font-weight: 600;
+}
+
+.conduct__list a:hover {
+  color: var(--ochre);
+}
+
+.conduct .block-btn {
+  align-self: flex-start;
+}

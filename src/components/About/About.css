@@ -1,0 +1,107 @@
+.about {
+  background: var(--lime);
+  color: var(--evergreen);
+}
+
+.about__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.about__intro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 48px;
+  align-items: flex-end;
+}
+
+.about__title {
+  flex: 1 1 380px;
+  line-height: 0.95;
+}
+
+.about__lead {
+  flex: 999 1 420px;
+  min-width: 0;
+  font-size: 21px;
+  line-height: 1.5;
+}
+
+.about__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.about__card {
+  background: var(--evergreen);
+  color: var(--lime);
+  border: 3px solid var(--evergreen);
+  box-shadow: 6px 6px 0 var(--ochre);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about__glyph {
+  font-family: var(--font-display);
+  font-size: 56px;
+  line-height: 1;
+  color: var(--amber);
+}
+
+.about__card-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.about__card-text {
+  line-height: 1.55;
+  color: var(--lime-soft);
+}
+
+@media (max-width: 600px) {
+  .about__inner {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+  .about__lead {
+    font-size: 18px;
+  }
+}
+
+.about__why {
+  border-top: 3px solid var(--evergreen);
+  padding-top: 32px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 16px 48px;
+}
+
+.about__why-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 28px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.about__why-text {
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+@media (max-width: 760px) {
+  .about__why {
+    grid-template-columns: 1fr;
+  }
+}

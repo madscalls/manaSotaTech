@@ -1,0 +1,81 @@
+.connect {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  padding-top: 32px;
+  padding-bottom: 88px;
+}
+
+.connect__block,
+.connect__sheships {
+  border: var(--border);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.connect__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 26px;
+  text-transform: uppercase;
+}
+
+.connect__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.connect__link {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: var(--border);
+  padding: 12px 16px;
+}
+
+.connect__link:hover {
+  background: var(--lime);
+  color: var(--evergreen);
+}
+
+.connect__sheships {
+  background: var(--paper);
+  color: var(--evergreen);
+  box-shadow: var(--shadow);
+}
+
+.connect__sheships-label {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.connect__sheships-text {
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.connect__sheships-link {
+  align-self: flex-start;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--lime);
+  background: var(--evergreen);
+  padding: 12px 18px;
+}
+
+.connect__sheships-link:hover {
+  color: var(--amber);
+}

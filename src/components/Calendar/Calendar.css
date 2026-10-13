@@ -1,0 +1,117 @@
+.calendar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 88px;
+  padding-bottom: 48px;
+}
+
+.calendar__head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.calendar__nav {
+  display: flex;
+  gap: 10px;
+}
+
+.calendar__btn {
+  width: 52px;
+  height: 52px;
+  border: var(--border);
+  background: var(--evergreen);
+  color: var(--lime);
+  font-family: var(--font-display);
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.calendar__btn:hover {
+  background: var(--lime);
+  color: var(--evergreen);
+}
+
+.calendar__btn--next {
+  background: var(--amber);
+  color: var(--evergreen);
+}
+
+.calendar__scroll {
+  overflow-x: auto;
+  padding: 0 8px 8px 0;
+}
+
+.calendar__board {
+  min-width: 640px;
+  border: var(--border);
+  background: var(--paper);
+  color: var(--evergreen);
+  box-shadow: var(--shadow);
+}
+
+.calendar__weekdays,
+.calendar__grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.calendar__weekdays {
+  background: var(--lime);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.calendar__weekday {
+  padding: 12px;
+}
+
+.calendar__cell {
+  min-height: 104px;
+  border-top: 2px solid var(--evergreen);
+  border-right: 2px solid var(--evergreen);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.calendar__cell:nth-child(7n) {
+  border-right: none;
+}
+
+.calendar__cell--blank {
+  background: var(--lime-soft);
+}
+
+.calendar__cell--today .calendar__day {
+  background: var(--evergreen);
+  color: var(--lime);
+  padding: 0 6px;
+  align-self: flex-start;
+}
+
+.calendar__day {
+  font-family: var(--font-display);
+  font-size: 22px;
+}
+
+.calendar__event {
+  background: var(--amber);
+  color: var(--evergreen);
+  border: 2px solid var(--evergreen);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 12px;
+  padding: 4px 6px;
+  text-decoration: none;
+}
+
+.calendar__event:hover {
+  background: var(--evergreen);
+  color: var(--lime);
+}
