@@ -1,6 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import Matter from 'matter-js';
-import gsap from 'gsap';
 import './HeroTitle.css';
 
 const IDLE_MS = 3000;
@@ -9,7 +7,7 @@ const WALL = 400;
 const clamp = (v, min, max) => Math.min(Math.max(v, min), max);
 const rand = (min, max) => min + Math.random() * (max - min);
 
-function createPlayground({ wrap, layer, hero }) {
+function createPlayground({ wrap, layer, hero, Matter, gsap }) {
   const { Engine, Bodies, Body, Composite } = Matter;
   const engine = Engine.create();
   engine.gravity.y = 1.2;
@@ -100,6 +98,7 @@ function createPlayground({ wrap, layer, hero }) {
     Body.setVelocity(l.body, { x: vx, y: vy });
     Body.setAngularVelocity(l.body, rand(-0.25, 0.25));
     scheduleReturn();
+    wake();
   };
 
   function goHome() {
@@ -196,20 +195,47 @@ function createPlayground({ wrap, layer, hero }) {
     on(l.el, 'pointercancel', end);
   });
 
-  const tick = () => {
+  let running = false;
+  let visible = true;
+
+  function wake() {
+    if (running || !visible) return;
+    running = true;
+    gsap.ticker.add(tick);
+  }
+
+  function sleep() {
+    if (!running) return;
+    running = false;
+    gsap.ticker.remove(tick);
+  }
+
+  function tick(time, deltaTime) {
     if (drag) {
       Body.setPosition(drag.l.body, drag.target);
       Body.setVelocity(drag.l.body, { x: 0, y: 0 });
     }
-    Engine.update(engine, 1000 / 60);
+    Engine.update(engine, clamp(deltaTime, 8, 33));
+    let moving = Boolean(drag);
     letters.forEach((l) => {
-      if (l.state !== 'home') place(l);
+      if (l.state !== 'home') {
+        place(l);
+        moving = true;
+      }
     });
-  };
-  gsap.ticker.add(tick);
+    if (!moving) sleep();
+  }
+
+  const observer = new IntersectionObserver(([entry]) => {
+    visible = entry.isIntersecting;
+    if (!visible) sleep();
+    else if (drag || letters.some((l) => l.state !== 'home')) wake();
+  });
+  observer.observe(hero);
 
   return () => {
-    gsap.ticker.remove(tick);
+    sleep();
+    observer.disconnect();
     clearTimeout(idle);
     listeners.forEach(([el, type, fn]) => el.removeEventListener(type, fn));
     letters.forEach((l) => gsap.killTweensOf(l.el));
@@ -239,7 +265,11 @@ export default function HeroTitle() {
       await document.fonts.ready;
       if (cancelled) return;
       teardown();
-      teardown = createPlayground({ wrap, layer, hero });
+      const [matterModule, gsapModule] = await Promise.all([import('matter-js'), import('gsap')]);
+      if (cancelled) return;
+      const Matter = matterModule.default ?? matterModule;
+      const gsap = gsapModule.default ?? gsapModule.gsap;
+      teardown = createPlayground({ wrap, layer, hero, Matter, gsap });
       setActive(true);
     };
 
