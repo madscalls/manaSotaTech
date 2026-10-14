@@ -34,3 +34,12 @@
 .hero-title.is-active .hero-title__char {
   color: transparent;
 }
+
+@media (max-width: 600px) {
+  .hero-title__line .hero__title-tag {
+    display: block;
+    width: fit-content;
+    margin-left: 0;
+    margin-top: 0.08em;
+  }
+}
