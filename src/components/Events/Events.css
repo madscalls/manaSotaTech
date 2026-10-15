@@ -106,10 +106,6 @@
   line-height: 1.5;
 }
 
-.events__empty .events__btn {
-  margin-top: 8px;
-}
-
 .events__calendar {
   display: block;
   width: 100%;

@@ -4,7 +4,10 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "events": "node scripts/fetch-events.mjs",
+    "predev": "node scripts/fetch-events.mjs",
     "dev": "vite",
+    "prebuild": "node scripts/fetch-events.mjs",
     "build": "vite build",
     "preview": "vite preview"
   },

@@ -9,14 +9,10 @@ export const site = {
   },
 
   luma: {
-    calendarUrl: null,
+    calendarUrl: 'https://luma.com/manasotatechnetwork',
     calendarEmbed: 'https://luma.com/embed/calendar/cal-AvscDnzrViZbAPl/events',
+    icsFeed: 'https://api.lu.ma/ics/get?entity=calendar&id=cal-AvscDnzrViZbAPl',
     checkoutScript: 'https://embed.lu.ma/checkout-button.js',
-    nextEvent: {
-      id: 'evt-1cszRT4KAD5DRBH',
-      url: 'https://luma.com/event/evt-1cszRT4KAD5DRBH',
-      endsAt: null,
-    },
   },
 
   nextMeetup: {
