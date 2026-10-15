@@ -4,8 +4,8 @@ export const site = {
   repository: 'https://github.com/madscalls/manaSotaTech',
 
   meetup: {
-    group: 'https://www.meetup.com/[MEETUP-GROUP-SLUG]/',
-    events: 'https://www.meetup.com/[MEETUP-GROUP-SLUG]/events/',
+    group: 'https://www.meetup.com/sarasota-manatee-tech-network/',
+    events: 'https://www.meetup.com/sarasota-manatee-tech-network/events/',
   },
 
   nextMeetup: {

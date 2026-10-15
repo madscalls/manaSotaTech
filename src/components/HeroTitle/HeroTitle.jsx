@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import MtnIcon from '../MtnIcon/MtnIcon.jsx';
 import './HeroTitle.css';
 
 const IDLE_MS = 3000;
@@ -293,7 +294,10 @@ export default function HeroTitle() {
   return (
     <div ref={wrapRef} className={`hero-title${active ? ' is-active' : ''}`}>
       <h1 className="hero__title" aria-label="ManaSota Tech Network">
-        <span className="hero-title__line">ManaSota</span>
+        <span className="hero-title__line">
+          ManaSota
+          <MtnIcon className="hero-title__icon" weight={6.5} />
+        </span>
         <span className="hero-title__line">
           Tech
           <span className="hero__title-tag">

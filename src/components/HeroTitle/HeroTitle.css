@@ -2,6 +2,16 @@
   display: block;
 }
 
+.hero-title__line:first-child {
+  white-space: nowrap;
+}
+
+.hero-title__icon {
+  height: 0.8em;
+  margin-left: 0.1em;
+  vertical-align: 0.04em;
+}
+
 .hero-title__layer {
   position: absolute;
   inset: 0;
@@ -36,6 +46,10 @@
 }
 
 @media (max-width: 600px) {
+  .hero-title .hero__title {
+    font-size: calc((100vw - 32px) / 6.7);
+  }
+
   .hero-title__line .hero__title-tag {
     display: block;
     width: fit-content;
