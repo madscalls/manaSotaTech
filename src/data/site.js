@@ -21,11 +21,6 @@ export const site = {
     venue: '[Venue]',
   },
 
-  mailchimp: {
-    action: 'https://[ACCOUNT].us1.list-manage.com/subscribe/post?u=[U]&id=[ID]',
-    botField: 'b_[U]_[ID]',
-  },
-
   social: [
     { label: 'LinkedIn group', href: 'https://www.linkedin.com/groups/[GROUP-ID]/' },
     { label: 'Facebook', href: 'https://www.facebook.com/[PAGE]' },

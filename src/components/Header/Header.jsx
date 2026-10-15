@@ -4,7 +4,7 @@ import './Header.css';
 
 const links = [
   { href: '#about', label: 'About' },
-  { href: '#join', label: 'Join' },
+  { href: '#connect', label: 'Join' },
   { href: '#conduct', label: 'Conduct' },
 ];
 
