@@ -2,13 +2,16 @@ import { useEffect, useState } from 'react';
 import { site } from '../../data/site.js';
 import './Header.css';
 
+const home = import.meta.env.BASE_URL;
+
 const links = [
-  { href: '#about', label: 'About' },
-  { href: '#connect', label: 'Join' },
-  { href: '#conduct', label: 'Conduct' },
+  { href: `${home}#about`, label: 'About' },
+  { href: `${home}#connect`, label: 'Join' },
+  { href: `${home}faq/`, label: 'FAQ', page: 'faq' },
+  { href: `${home}#conduct`, label: 'Conduct' },
 ];
 
-export default function Header() {
+export default function Header({ current = 'home' }) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -24,7 +27,7 @@ export default function Header() {
 
   return (
     <header className={`header container${open ? ' is-open' : ''}`}>
-      <a href="#top" className="header__logo" aria-label="ManaSota Tech Network home" onClick={close}>
+      <a href={`${home}#top`} className="header__logo" aria-label="ManaSota Tech Network home" onClick={close}>
         MTN
       </a>
       <button
@@ -39,11 +42,17 @@ export default function Header() {
       </button>
       <nav id="main-nav" className="header__nav" aria-label="Main">
         {links.map((link) => (
-          <a key={link.href} href={link.href} className="header__link" onClick={close}>
+          <a
+            key={link.href}
+            href={link.href}
+            className="header__link"
+            aria-current={link.page === current ? 'page' : undefined}
+            onClick={close}
+          >
             {link.label}
           </a>
         ))}
-        <a href="#events" className="header__link header__link--accent" onClick={close}>
+        <a href={`${home}#events`} className="header__link header__link--accent" onClick={close}>
           Events
         </a>
       </nav>

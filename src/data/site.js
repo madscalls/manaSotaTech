@@ -3,11 +3,6 @@ export const site = {
   email: 'hello@manasotatech.org',
   repository: 'https://github.com/madscalls/manaSotaTech',
 
-  meetup: {
-    group: 'https://www.meetup.com/sarasota-manatee-tech-network/',
-    events: 'https://www.meetup.com/sarasota-manatee-tech-network/events/',
-  },
-
   luma: {
     calendarUrl: 'https://luma.com/manasotatechnetwork',
     calendarEmbed: 'https://luma.com/embed/calendar/cal-AvscDnzrViZbAPl/events',
@@ -28,6 +23,8 @@ export const site = {
   ],
 
   sheShips: 'https://sheships.dev',
+
+  createdBy: { name: 'Whelk Works', href: 'https://whelkworks.com' },
 
   presenters: [
     { name: 'Securipolis', href: 'https://securipolis.com', logo: null },

@@ -8,8 +8,8 @@ export default function Connect() {
         <h2 className="connect__title">Find us between meetups</h2>
         <ul className="connect__links">
           <li>
-            <a href={site.meetup.group} className="connect__link">
-              Meetup
+            <a href={site.luma.calendarUrl} className="connect__link">
+              Luma
             </a>
           </li>
           {site.social.map((s) => (

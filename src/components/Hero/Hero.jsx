@@ -16,8 +16,8 @@ export default function Hero() {
           <a href="#events" className="hero__cta hero__cta--primary">
             See upcoming events
           </a>
-          <a href={site.meetup.group} className="hero__cta">
-            Join us on Meetup
+          <a href={site.luma.calendarUrl} className="hero__cta">
+            Follow us on Luma
           </a>
           <a href={site.repository} className="hero__cta">
             View the source on GitHub

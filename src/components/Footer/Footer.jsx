@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { site } from '../../data/site.js';
 import './Footer.css';
 
@@ -5,21 +6,27 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer__inner container">
-        <div className="footer__presented">
-          <span className="footer__label">Presented by</span>
-          <div className="footer__logos">
-            {site.presenters.map((p) => (
-              <a key={p.name} href={p.href} className="footer__presenter">
-                {p.logo ? <img src={p.logo} alt={p.name} className="footer__logo" /> : p.name}
+        <p className="footer__line">
+          Created by{' '}
+          <a href={site.createdBy.href} className="footer__link">
+            {site.createdBy.name}
+          </a>
+        </p>
+        <p className="footer__line">
+          Presented by{' '}
+          {site.presenters.map((p, i) => (
+            <Fragment key={p.name}>
+              {i > 0 && ' & '}
+              <a href={p.href} className="footer__link">
+                {p.name}
               </a>
-            ))}
-          </div>
-          <span className="footer__founded">Founded by Michael Quirk.</span>
-        </div>
-        <div className="footer__meta">
+            </Fragment>
+          ))}
+        </p>
+        <p className="footer__meta">
+          Founded by Michael Quirk · A volunteer-run nonprofit in formation ·{' '}
           <a href={`mailto:${site.email}`}>{site.email}</a>
-          <span>A volunteer-run nonprofit in formation.</span>
-        </div>
+        </p>
       </div>
     </footer>
   );

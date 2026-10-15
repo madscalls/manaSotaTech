@@ -6,8 +6,8 @@
   gap: 16px;
   justify-content: space-between;
   align-items: center;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .header__logo {
@@ -43,7 +43,8 @@
   color: var(--lime);
 }
 
-.header__link:hover {
+.header__link:hover,
+.header__link[aria-current='page'] {
   background: var(--lime);
   color: var(--evergreen);
 }
