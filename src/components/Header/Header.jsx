@@ -43,7 +43,7 @@ export default function Header() {
             {link.label}
           </a>
         ))}
-        <a href={site.meetup.events} className="header__link header__link--accent" onClick={close}>
+        <a href="#events" className="header__link header__link--accent" onClick={close}>
           Events
         </a>
       </nav>

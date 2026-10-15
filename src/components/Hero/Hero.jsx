@@ -13,7 +13,7 @@ export default function Hero() {
           Sarasota counties.
         </p>
         <div className="hero__actions">
-          <a href={site.meetup.events} className="hero__cta hero__cta--primary">
+          <a href="#events" className="hero__cta hero__cta--primary">
             See upcoming events
           </a>
           <a href={site.meetup.group} className="hero__cta">

@@ -8,6 +8,17 @@ export const site = {
     events: 'https://www.meetup.com/sarasota-manatee-tech-network/events/',
   },
 
+  luma: {
+    calendarUrl: null,
+    calendarEmbed: 'https://luma.com/embed/calendar/cal-AvscDnzrViZbAPl/events',
+    checkoutScript: 'https://embed.lu.ma/checkout-button.js',
+    nextEvent: {
+      id: 'evt-1cszRT4KAD5DRBH',
+      url: 'https://luma.com/event/evt-1cszRT4KAD5DRBH',
+      endsAt: null,
+    },
+  },
+
   nextMeetup: {
     date: '[Date]',
     time: '[Time]',
