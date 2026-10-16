@@ -29,7 +29,7 @@ npm run build    # production build in dist/
 The GitHub Actions workflow deploys the site to Pages when changes are pushed to
 `main` (or when manually triggered). In the repository settings, set **Pages >
 Build and deployment > Source** to **GitHub Actions**. The site will be available
-at `https://madscalls.github.io/manaSotaTech/`.
+at `https://manasotatech.org`.
 
 ## Where things live
 
