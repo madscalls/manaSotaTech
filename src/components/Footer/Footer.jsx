@@ -26,6 +26,8 @@ export default function Footer() {
         <p className="footer__meta">
           Founded by Michael Quirk · A volunteer-run nonprofit in formation ·{' '}
           <a href={`mailto:${site.email}`}>{site.email}</a>
+          {' · '}
+          <a href={`${import.meta.env.BASE_URL}privacy/`}>Privacy</a>
         </p>
       </div>
     </footer>
