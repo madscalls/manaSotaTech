@@ -1,4 +1,4 @@
-import { site } from '../../data/site.js';
+import { site, isReal } from '../../data/site.js';
 import './Connect.css';
 
 export default function Connect() {
@@ -12,7 +12,7 @@ export default function Connect() {
               Luma
             </a>
           </li>
-          {site.social.map((s) => (
+          {site.social.filter((s) => isReal(s.href)).map((s) => (
             <li key={s.label}>
               <a href={s.href} className="connect__link">
                 {s.label}

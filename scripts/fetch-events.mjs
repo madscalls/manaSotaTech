@@ -38,7 +38,8 @@ function parse(ics) {
       const end = parseDate(field(block, 'DTEND')) ?? start;
       const url = findUrl(block) ?? (id ? `https://luma.com/event/${id}` : null);
       const title = (field(block, 'SUMMARY') ?? '').replace(/\\([,;\\])/g, '$1');
-      return { id, title, start, end, url };
+      const location = (field(block, 'LOCATION') ?? '').replace(/\\([,;\\])/g, '$1') || null;
+      return { id, title, start, end, url, location };
     })
     .filter((event) => event.start && new Date(event.end) > new Date())
     .sort((a, b) => new Date(a.start) - new Date(b.start));

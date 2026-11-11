@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { site } from '../../data/site.js';
 import lumaEvents from '../../data/events.json';
 import MtnIcon from '../MtnIcon/MtnIcon.jsx';
@@ -6,9 +6,8 @@ import './Events.css';
 
 const SCRIPT_ID = 'luma-checkout';
 
-function getUpcoming() {
+function getUpcoming(now) {
   if (!lumaEvents?.events) return null;
-  const now = new Date();
   return lumaEvents.events.filter((event) => new Date(event.end) > now);
 }
 
@@ -23,7 +22,9 @@ function FollowButton({ ghost = false, children = 'Follow on Luma' }) {
 }
 
 export default function Events() {
-  const upcoming = getUpcoming();
+  const [now, setNow] = useState(() => new Date(lumaEvents?.fetchedAt ?? 0));
+  useEffect(() => setNow(new Date()), []);
+  const upcoming = getUpcoming(now);
   const empty = upcoming !== null && upcoming.length === 0;
   const next = upcoming?.[0] ?? null;
 
