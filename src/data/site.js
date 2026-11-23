@@ -28,9 +28,9 @@ export const site = {
   },
 
   social: [
-    { label: 'LinkedIn group', href: 'https://www.linkedin.com/groups/[GROUP-ID]/' },
-    { label: 'Facebook', href: 'https://www.facebook.com/[PAGE]' },
-    { label: 'Instagram', href: 'https://www.instagram.com/[HANDLE]/' },
+    { label: 'Facebook', href: 'https://www.facebook.com/1434228186437453' },
+    { label: 'Instagram', href: 'https://www.instagram.com/manasotatech/' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/company/manasota-tech-network/' },
   ],
 
   sheShips: 'https://sheships.dev',
