@@ -25,6 +25,6 @@ export const faq = [
   {
     question: 'Where are events held?',
     answer:
-      "Venues rotate across Manatee and Sarasota counties, from Parrish, Palmetto, Ellenton, Bradenton, and Lakewood Ranch down through Sarasota, Osprey, Nokomis, Venice, North Port, and Englewood. Coming from Charlotte County or beyond? You're welcome too. Each event listing has the address.",
+      "Venues rotate across Manatee and Sarasota counties, most often in Bradenton, Lakewood Ranch and Sarasota, with others in Parrish, Palmetto, Ellenton, Osprey, Nokomis, Venice and North Port. Coming from Charlotte County or beyond? You're welcome too. Each event listing has the address.",
   },
 ];
